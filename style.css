@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ h2,p{
+    color: white;
+}
+h4{
+    color: red;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(background.jpg);
+}
+
+.container {
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with your image path */
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 40vh;
+    max-width: 90%;
+    position: relative; /* Position relative for absolute positioning of blur effect */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    overflow: hidden; /* Hide any content that may overflow */
+    border: 1px solid lightgray;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(10px); /* Adjust blur intensity as needed */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+
+
+form{
+    margin: 2rem 0 1rem 0;
+}
+
+form select , button,input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input{
+    border: 1px solid lightgray ;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.select-container img{
+    font-size: 1rem;
+}
+.select-container select{
+    height: 2.5rem;
+    border-radius: 0.1rem;
+    width: auto;
+}
+
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    margin-top: 0.5rem;
+}
+
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.msg{
+    margin:2rem 0 2rem 0;
+    color: black;
+    font-size: 2rem;
+}
+
+form button{
+    height: 3rem;
+    background-color: rgb(40, 40, 41);
+    color: white;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(91, 90, 97);
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+}
