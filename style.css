@@ -117,4 +117,7 @@ button:hover{
     .container {
         width: 90%; /* Adjusted width for smaller screens */
     }
+    .msg{
+        color: white;
+    }
 }
